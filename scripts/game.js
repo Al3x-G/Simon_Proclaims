@@ -10,6 +10,18 @@ function newGame() {
     game.currentGame = [];
     game.playerMoves = [];
     game.score = 0;
+
+    for (let circle of document.getElementsByClassName("circle")) {
+        if (circle.getAttribute("data-listener") !== "true") {
+            circle.addEventListener("click", (e) => {
+                let move = e.target.getAttribute("id");
+                lightsOn(move);
+                game.playerMoves.push(move);
+                playerTurn();
+            });
+            circle.setAttribute("data-listener", "true");
+        }
+    }
     showScore();
     addTurn();
 }
@@ -22,7 +34,7 @@ function addTurn() {
 
 function showTurns() {
     game.turnNumber = 0;
-    let turns = setInterval(() => {
+    let turns = setInterval(function () {
         lightsOn(game.currentGame[game.turnNumber]);
         game.turnNumber++;
         if (game.turnNumber >= game.currentGame.length) {
