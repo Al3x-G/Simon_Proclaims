@@ -1,0 +1,22 @@
+{
+  "name": "simon_proclaims",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Al3x-G/Simon_Proclaims.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Al3x-G/Simon_Proclaims/issues"
+  },
+  "homepage": "https://github.com/Al3x-G/Simon_Proclaims#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
